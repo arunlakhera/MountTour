@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textDarkBlue"
+    tools:context=".HomeActivity">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/layout_Destinations"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_toolbar"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_med"
+        android:layout_marginLeft="@dimen/margin_med"
+        android:layout_marginRight="@dimen/margin_med"
+        android:layout_marginStart="@dimen/margin_med"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_lar">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardview_Destinations"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/margin_med"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_med"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_lar"
+            android:layout_weight="1"
+            android:rotation="-2"
+            card_view:cardBackgroundColor="@color/textDefault"
+            card_view:cardCornerRadius="@dimen/card_Radius"
+            card_view:cardElevation="@dimen/card_elevation">
+
+            <Button
+                android:id="@+id/button_Destinations"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_med"
+                android:background="@drawable/triund1"
+                android:gravity="center|bottom"
+                android:text="@string/title_destination"
+                android:textColor="@color/textDefault"
+                android:textSize="@dimen/text_med" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardview_Favourite"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_med"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_med"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_weight="1"
+            android:rotation="4"
+            card_view:cardBackgroundColor="@color/colorAccent"
+            card_view:cardCornerRadius="@dimen/card_Radius"
+            card_view:cardElevation="@dimen/card_elevation">
+
+            <Button
+                android:id="@+id/button_Favourite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_med"
+                android:background="@drawable/triund2"
+                android:gravity="center|bottom"
+                android:text="@string/title_favourite"
+                android:textColor="@color/textDefault"
+                android:textSize="@dimen/text_med" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardview_Events"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_lar"
+            android:layout_marginEnd="@dimen/margin_med"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_med"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_weight="1"
+            android:rotation="-3"
+            card_view:cardBackgroundColor="@color/textDefault"
+            card_view:cardCornerRadius="@dimen/card_Radius"
+            card_view:cardElevation="@dimen/card_elevation">
+
+            <Button
+                android:id="@+id/button_Events"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_med"
+                android:background="@drawable/img_events"
+                android:gravity="center|bottom"
+                android:text="@string/title_event"
+                android:textColor="@color/textDefault"
+                android:textSize="@dimen/text_med" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

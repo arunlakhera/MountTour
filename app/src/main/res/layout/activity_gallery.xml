@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textDarkBlue"
+    tools:context=".GalleryActivity">
+
+    <Button
+        android:id="@+id/button_Back"
+        android:layout_width="@dimen/menu_button_size"
+        android:layout_height="@dimen/menu_button_size"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/margin_med"
+        android:layout_marginRight="@dimen/margin_med"
+        android:layout_marginTop="@dimen/margin_med"
+        android:background="@drawable/backbutton" />
+
+    <ImageView
+        android:id="@+id/imageView_PlaceImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/tirthan2" />
+
+    <Button
+        android:id="@+id/button_Prev"
+        android:layout_width="@dimen/menu_button_size"
+        android:layout_height="@dimen/menu_button_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_lar"
+        android:layout_marginStart="@dimen/margin_lar"
+        android:background="@drawable/back" />
+
+    <Button
+        android:id="@+id/button_Next"
+        android:layout_width="@dimen/menu_button_size"
+        android:layout_height="@dimen/menu_button_size"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_lar"
+        android:layout_marginRight="@dimen/margin_lar"
+        android:background="@drawable/next" />
+</RelativeLayout>

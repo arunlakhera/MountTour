@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mount Tour</string>
+    <string name="app_home">Home</string>
+    <string name="title_destination">Destinations</string>
+    <string name="title_favourite">My Favourite</string>
+    <string name="title_event">Upcoming Events</string>
+    <string name="about_lbl">About the Place</string>
+    <string name="location_lbl">Location</string>
+    <string name="reach_lbl">How to Reach</string>
+    <string name="nearest_lbl">Nearest</string>
+    <string name="hotel_lbl">Hotel</string>
+    <string name="bank_lbl">Bank</string>
+    <string name="medical_lbl">Medical</string>
+</resources>
