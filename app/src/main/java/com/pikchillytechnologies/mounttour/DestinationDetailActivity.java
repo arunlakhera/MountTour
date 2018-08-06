@@ -175,7 +175,7 @@ public class DestinationDetailActivity extends AppCompatActivity {
     public void menuDestinations(View view){
         startActivity(new Intent(DestinationDetailActivity.this,DestinationsActivity.class));
     }
-    
+
     // 5. Function for Favourite button
     public void menuFavourite(View view){
         startActivity(new Intent(DestinationDetailActivity.this,FavouriteActivity.class));
