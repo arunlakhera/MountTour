@@ -1,6 +1,9 @@
 package com.pikchillytechnologies.mounttour;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +25,7 @@ public class DestinationsActivity extends AppCompatActivity {
     private DestinationsAdapter m_DestinationsAdapter;
     private List<Places> m_AllPlacesList;
     private ListView m_Places_ListView;
+    Dialog menuDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,7 @@ public class DestinationsActivity extends AppCompatActivity {
         m_Places_ListView = findViewById(R.id.listView_Destinations);
         m_Back_Button = findViewById(R.id.button_Back);
         m_AllPlacesList = new ArrayList<>();
+        menuDialog = new Dialog(this);
 
         // Set Title of the Activity to Destinations
         m_Title_TextView.setText(R.string.title_destination);
@@ -119,5 +125,43 @@ public class DestinationsActivity extends AppCompatActivity {
                 startActivity(destinationDetailIntent);
             }
         });
+    }
+
+    /**
+     * Menu Functions
+     * */
+
+    // 1. Function to Show Menu
+    public void showMenu(View view) {
+
+        menuDialog.setContentView(R.layout.menu_layout);
+        menuDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        menuDialog.show();
+    }
+
+    // 2. Function to close Popup Menu
+    public void closeMenu(View view) {
+        menuDialog.dismiss();
+    }
+
+    // 3. Function for Home button
+    public void menuHome(View view){
+        startActivity(new Intent(DestinationsActivity.this,HomeActivity.class));
+    }
+
+    // 4. Function for Destinations button
+    public void menuDestinations(View view){
+        Toast.makeText(getApplicationContext(),"You are in Destinations Screen",Toast.LENGTH_LONG).show();
+        menuDialog.dismiss();
+    }
+
+    // 5. Function for Favourite button
+    public void menuFavourite(View view){
+        startActivity(new Intent(DestinationsActivity.this,FavouriteActivity.class));
+    }
+
+    // 6. Function for Event button
+    public void menuEvent(View view){
+        startActivity(new Intent(DestinationsActivity.this,EventsActivity.class));
     }
 }

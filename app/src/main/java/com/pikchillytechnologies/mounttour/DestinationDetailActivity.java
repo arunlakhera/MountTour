@@ -1,6 +1,9 @@
 package com.pikchillytechnologies.mounttour;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +31,8 @@ public class DestinationDetailActivity extends AppCompatActivity {
     private TextView m_Bank_TextView;
     private TextView m_Medical_TextView;
     private TextView m_Title_TextView;
+    Dialog menuDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,7 @@ public class DestinationDetailActivity extends AppCompatActivity {
         m_Bank_TextView = findViewById(R.id.textView_Bank);
         m_Medical_TextView = findViewById(R.id.textView_Medical);
         m_Title_TextView = findViewById(R.id.textView_Title);
+        menuDialog = new Dialog(this);
 
         // Set values for views
         m_About_TextView.setText(placeObject.getM_About());
@@ -141,5 +147,42 @@ public class DestinationDetailActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Destination added to My Favourite", Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    /**
+     * Menu Functions
+     * */
+
+    // 1. Function to Show Menu
+    public void showMenu(View view) {
+
+        menuDialog.setContentView(R.layout.menu_layout);
+        menuDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        menuDialog.show();
+    }
+
+    // 2. Function to close Popup Menu
+    public void closeMenu(View view) {
+        menuDialog.dismiss();
+    }
+
+    // 3. Function for Home button
+    public void menuHome(View view){
+        startActivity(new Intent(DestinationDetailActivity.this,HomeActivity.class));
+    }
+
+    // 4. Function for Destinations button
+    public void menuDestinations(View view){
+        startActivity(new Intent(DestinationDetailActivity.this,DestinationsActivity.class));
+    }
+    
+    // 5. Function for Favourite button
+    public void menuFavourite(View view){
+        startActivity(new Intent(DestinationDetailActivity.this,FavouriteActivity.class));
+    }
+
+    // 6. Function for Event button
+    public void menuEvent(View view){
+        startActivity(new Intent(DestinationDetailActivity.this,EventsActivity.class));
     }
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/textDarkBlue"
+    >
+    <Button
+        android:id="@+id/button_MenuHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_home"
+        android:background="@color/textAqua"
+        android:textColor="@color/textDefault"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_small"
+        android:onClick="menuHome"
+        />
+    <Button
+        android:id="@+id/button_MenuDestinations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_destination"
+        android:background="@color/textAqua"
+        android:textColor="@color/textDefault"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_small"
+        android:onClick="menuDestinations"
+        />
+
+    <Button
+        android:id="@+id/button_MenuFavourite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_favourite"
+        android:background="@color/textAqua"
+        android:textColor="@color/textDefault"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_small"
+        android:onClick="menuFavourite"
+        />
+
+    <Button
+        android:id="@+id/button_MenuEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_event"
+        android:background="@color/textAqua"
+        android:textColor="@color/textDefault"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_small"
+        android:onClick="menuEvent"
+        />
+</LinearLayout>
