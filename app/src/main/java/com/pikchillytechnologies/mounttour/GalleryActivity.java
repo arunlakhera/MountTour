@@ -29,9 +29,9 @@ public class GalleryActivity extends AppCompatActivity {
         m_Prev_Button = findViewById(R.id.button_Prev);
         m_Next_Button = findViewById(R.id.button_Next);
 
-        m_Source = getIntent().getStringExtra("source");
-        placeObject = getIntent().getParcelableExtra("myPlaceKey");
-        m_ImageNumber = getIntent().getExtras().getInt("imageNumber");
+        m_Source = getIntent().getStringExtra(getResources().getString(R.string.source));
+        placeObject = getIntent().getParcelableExtra(getResources().getString(R.string.myPlaceKey));
+        m_ImageNumber = getIntent().getExtras().getInt(getResources().getString(R.string.imageNumber));
 
         if (m_ImageNumber == 2) {
             m_PlaceImage.setImageResource(placeObject.getM_PlaceImageId2());
@@ -49,17 +49,17 @@ public class GalleryActivity extends AppCompatActivity {
                 Intent galleryIntent;
                 galleryIntent = new Intent(GalleryActivity.this, GalleryActivity.class);
 
-                if (m_Source.equals("DestinationDetail")) {
+                if (m_Source.equals(getResources().getString(R.string.act_destination))) {
 
                     galleryIntent = new Intent(GalleryActivity.this, DestinationDetailActivity.class);
-                    galleryIntent.putExtra("source", m_Source);
-                    galleryIntent.putExtra("myPlaceKey", placeObject);
+                    galleryIntent.putExtra(getResources().getString(R.string.source), m_Source);
+                    galleryIntent.putExtra(getResources().getString(R.string.myPlaceKey), placeObject);
 
-                } else if (m_Source.equals("Favourite")) {
+                } else if (m_Source.equals(getResources().getString(R.string.act_favourite))) {
 
                     galleryIntent = new Intent(GalleryActivity.this, FavouriteActivity.class);
-                    galleryIntent.putExtra("source", m_Source);
-                    galleryIntent.putExtra("myPlaceKey", placeObject);
+                    galleryIntent.putExtra(getResources().getString(R.string.source), m_Source);
+                    galleryIntent.putExtra(getResources().getString(R.string.myPlaceKey), placeObject);
 
                 }
 

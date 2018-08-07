@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         m_Button_Destinations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                homeIntent("DestinationsActivity");
+                homeIntent(String.valueOf(R.string.act_destination));
             }
         });
 
@@ -54,7 +54,7 @@ public class HomeActivity extends AppCompatActivity {
         m_Button_Favourite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                homeIntent("FavouriteActivity");
+                homeIntent(String.valueOf(R.string.act_favourite));
             }
         });
 
@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity {
         m_Button_Events.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                homeIntent("EventsActivity");
+                homeIntent(String.valueOf(R.string.act_events));
             }
         });
     }
@@ -74,11 +74,11 @@ public class HomeActivity extends AppCompatActivity {
 
         Intent homeIntent;
 
-        if (destination.equals("DestinationsActivity")) {
+        if (destination.equals(String.valueOf(R.string.act_destination))) {
             homeIntent = new Intent(HomeActivity.this, DestinationsActivity.class);
-        } else if (destination.equals("FavouriteActivity")) {
+        } else if (destination.equals(String.valueOf(R.string.act_favourite))) {
             homeIntent = new Intent(HomeActivity.this, FavouriteActivity.class);
-        } else if (destination.equals("EventsActivity")) {
+        } else if (destination.equals(String.valueOf(R.string.act_events))) {
             homeIntent = new Intent(HomeActivity.this, EventsActivity.class);
         } else {
             homeIntent = new Intent(HomeActivity.this, HomeActivity.class);
@@ -105,7 +105,7 @@ public class HomeActivity extends AppCompatActivity {
 
     // 3. Function for Home button
     public void menuHome(View view){
-        Toast.makeText(getApplicationContext(),"You are in Home Screen",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),R.string.toast_home,Toast.LENGTH_LONG).show();
         menuDialog.dismiss();
     }
 
@@ -123,5 +123,4 @@ public class HomeActivity extends AppCompatActivity {
     public void menuEvent(View view){
         startActivity(new Intent(HomeActivity.this,EventsActivity.class));
     }
-
 }

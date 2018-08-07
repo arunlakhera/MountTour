@@ -43,65 +43,66 @@ public class DestinationsActivity extends AppCompatActivity {
         m_Title_TextView.setText(R.string.title_destination);
 
         // Adding data to listview using Places class
-        m_AllPlacesList.add(new Places("Nag Tibba",
-                "Mussoorie",
-                "Uttarakhand",
-                "Nag Tibba trek gives you the unmatched experience of trekking on one of the most beautiful landscapes in Uttarakhand with lush green meadows and snow-capped mountains. The panorama of the Himalayan snow peaks of Garhwal and Himachal offers views of famous peaks Bandarpoonch, Swargarohini, Srikanth and Black peak",
-                "Delhi-Dehradun-Pantwari-Nag Tibba",
-                "Mussoorie",
-                "Mussoorie",
-                "Mussoorie",
+        m_AllPlacesList.add(new Places(getResources().getString(R.string.dest1_name),
+                getResources().getString(R.string.dest1_city),
+                getResources().getString(R.string.dest1_state),
+                getResources().getString(R.string.dest1_about),
+                getResources().getString(R.string.dest1_howtoreach),
+                getResources().getString(R.string.dest1_hotel),
+                getResources().getString(R.string.dest1_bank),
+                getResources().getString(R.string.dest1_medical),
                 R.drawable.nagtibba1, R.drawable.nagtibba2, R.drawable.nagtibba3));
 
-        m_AllPlacesList.add(new Places("Triund",
-                "Mcleodganj",
-                "Himanchal Pradesh",
-                "Triund trek gives you the unmatched experience of trekking on one of the most beautiful landscapes in Himachal Pradesh with waterfalls, lush green meadows and snow-capped mountains. Triund trek is very much suitable in spring and summer as Triund temperature remains very suitable and weather at Triund & adjacent areas is becomes very enjoyable with beautiful sight of sky kissing high Himalayan peaks.",
-                "Delhi-Mcleodganj-Triund Hill",
-                "Mcleodganj",
-                "Mcleodganj",
-                "Mcleodganj",
-                R.drawable.triund1, R.drawable.triund2, R.drawable.triund3));
-
-        m_AllPlacesList.add(new Places("Tirthan",
-                "Aut",
-                "Himanchal Pradesh",
-                "The Great Himalayan National Park in Himachal Pradesh offers lush meadows, snow clad peaks, the enchanting Tirthan River and Himalayan flora and fauna. It has distinct, endangered and regionally endemic Himalayan species – Himalayan Musk Deer and Snow Leopard being the prominent ones. Seek adventure on the Great Himalayan National Park Trek and spend days amidst the Himalayas by the Tirthan River.",
-                "Delhi-Aut-Tirthan",
-                "Aut",
-                "Aut",
-                "Aut",
-                R.drawable.tirthan1, R.drawable.tirthan2, R.drawable.tirthan3));
-
-        m_AllPlacesList.add(new Places("Kheer Ganga",
-                "Uttarkashi",
-                "Himanchal Pradesh",
-                "The Parvati Valley is one of the most picturesque places in the Himalayan region of Himachal Pradesh. Two days is all you need to explore its magnificent landscape and get refreshed from within. The Kasol to Kheerganga trek is an invigorating journey, which not only unveils the stunning terrain of the Himalayas, but also gives you a chance to learn about the interesting culture of the people living here.",
-                "Delhi-Kasol-Barshaini-Rudra Nag-Kheer Ganga",
-                "Kasol",
-                "Kasol",
-                "Kasol",
-                R.drawable.kheerganga1, R.drawable.kheerganga2, R.drawable.kheerganga3));
-
-        m_AllPlacesList.add(new Places("Prashar Lake",
-                "Mandi",
-                "Himanchal Pradesh",
-                "Prashar Lake lies 49 km north of Mandi, Himachal Pradesh, India, with a three storied pagoda-like temple dedicated to the sage Prashar. The lake is located at a height of 2730 m above sea level. With deep blue waters, the lake is held sacred to the sage Prashar and he is regarded to have meditated there. Surrounded by snow-capped peaks and looking down on the fast flowing river Beas, the lake can be approached via Drang.",
-                "Delhi-Mandi-Prashar Lake",
-                "Mandi",
-                "Mandi",
-                "Mandi",
+        m_AllPlacesList.add(new Places(getResources().getString(R.string.dest2_name),
+                getResources().getString(R.string.dest2_city),
+                getResources().getString(R.string.dest2_state),
+                getResources().getString(R.string.dest2_about),
+                getResources().getString(R.string.dest2_howtoreach),
+                getResources().getString(R.string.dest2_hotel),
+                getResources().getString(R.string.dest2_bank),
+                getResources().getString(R.string.dest2_medical),
                 R.drawable.parasharlake1, R.drawable.parasharlake2, R.drawable.parasharlake3));
 
-        m_AllPlacesList.add(new Places("Chandrashila Trek",
-                "Tungnath",
-                "Uttarakhand",
-                "There are three reasons one must do this trek – the forests, the birds and the fabulous mountain views. Atop the peak, on a clear day, you can get a 360 degree view of peaks like Nanda Devi, Chaukhambha and Trishul. Another highlight of the trek is the chance to climb up to the world’s highest Shiva temple. Tungnath isthousand-year-old temple and is one of the five Panch Kedar, the holiest of Shiva temples. The sunrise from the Chandrashila summit wraps up the trek with strong emotions and memories to take back home.",
-                "Delhi-Chopta-Tungnath",
-                "Chandrapuri",
-                "Chandrapuri",
-                "Chandrapuri",
+        m_AllPlacesList.add(new Places(getResources().getString(R.string.dest3_name),
+                getResources().getString(R.string.dest3_city),
+                getResources().getString(R.string.dest3_state),
+                getResources().getString(R.string.dest3_about),
+                getResources().getString(R.string.dest3_howtoreach),
+                getResources().getString(R.string.dest3_hotel),
+                getResources().getString(R.string.dest3_bank),
+                getResources().getString(R.string.dest3_medical),
                 R.drawable.chandrashila1, R.drawable.chandrashila2, R.drawable.chandrashila3));
+
+        m_AllPlacesList.add(new Places(getResources().getString(R.string.dest4_name),
+                getResources().getString(R.string.dest4_city),
+                getResources().getString(R.string.dest4_state),
+                getResources().getString(R.string.dest4_about),
+                getResources().getString(R.string.dest4_howtoreach),
+                getResources().getString(R.string.dest4_hotel),
+                getResources().getString(R.string.dest4_bank),
+                getResources().getString(R.string.dest4_medical),
+                R.drawable.triund1, R.drawable.triund2, R.drawable.triund3
+        ));
+
+        m_AllPlacesList.add(new Places(getResources().getString(R.string.dest5_name),
+                getResources().getString(R.string.dest5_city),
+                getResources().getString(R.string.dest5_state),
+                getResources().getString(R.string.dest5_about),
+                getResources().getString(R.string.dest5_howtoreach),
+                getResources().getString(R.string.dest5_hotel),
+                getResources().getString(R.string.dest5_bank),
+                getResources().getString(R.string.dest5_medical),
+                R.drawable.tirthan1, R.drawable.tirthan2, R.drawable.tirthan3));
+
+        m_AllPlacesList.add(new Places(getResources().getString(R.string.dest6_name),
+                getResources().getString(R.string.dest6_city),
+                getResources().getString(R.string.dest6_state),
+                getResources().getString(R.string.dest6_about),
+                getResources().getString(R.string.dest6_howtoreach),
+                getResources().getString(R.string.dest6_hotel),
+                getResources().getString(R.string.dest6_bank),
+                getResources().getString(R.string.dest6_medical),
+                R.drawable.kheerganga1, R.drawable.kheerganga2, R.drawable.kheerganga3));
 
         m_DestinationsAdapter = new DestinationsAdapter(getApplicationContext(), m_AllPlacesList);
         m_Places_ListView.setAdapter(m_DestinationsAdapter);
@@ -120,8 +121,8 @@ public class DestinationsActivity extends AppCompatActivity {
 
                 Places placeObject = m_AllPlacesList.get(position);
                 Intent destinationDetailIntent = new Intent(DestinationsActivity.this, DestinationDetailActivity.class);
-                destinationDetailIntent.putExtra("myPlaceKey", placeObject);
-                destinationDetailIntent.putExtra("source", "Destination");
+                destinationDetailIntent.putExtra(getResources().getString(R.string.myPlaceKey), placeObject);
+                destinationDetailIntent.putExtra(getResources().getString(R.string.source), getResources().getString(R.string.act_destination));
                 startActivity(destinationDetailIntent);
             }
         });
@@ -151,7 +152,7 @@ public class DestinationsActivity extends AppCompatActivity {
 
     // 4. Function for Destinations button
     public void menuDestinations(View view){
-        Toast.makeText(getApplicationContext(),"You are in Destinations Screen",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),R.string.toast_destinations,Toast.LENGTH_LONG).show();
         menuDialog.dismiss();
     }
 

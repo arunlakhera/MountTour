@@ -11,4 +11,89 @@
     <string name="hotel_lbl">Hotel</string>
     <string name="bank_lbl">Bank</string>
     <string name="medical_lbl">Medical</string>
+    <string name="act_destination">DestinationsActivity</string>
+    <string name="act_favourite">FavouriteActivity</string>
+    <string name="act_events">EventsActivity</string>
+    <string name="toast_home">You are in Home screen</string>
+    <string name="toast_events">You are in Events screen</string>
+    <string name="toast_destinations">You are in Destinations screen</string>
+    <string name="toast_favourite">You are in Favourite screen</string>
+    <string name="source">source</string>
+    <string name="myPlaceKey">myPlaceKey</string>
+    <string name="imageNumber">imageNumber</string>
+    <string name="destination">Destination</string>
+    <string name="favourite">Favourite</string>
+    <string name="toast_dest_added">Destination added to My Favourite</string>
+    <string name="image_place">Imageview for Place</string>
+    <string name="event1_date">20 Aug 2018</string>
+    <string name="event1_place">Chandrashila</string>
+    <string name="event1_duration">1N / 2D</string>
+    <string name="event1_cost">Rs.3500 per person</string>
+    <string name="event1_phone">+91 999 9999 999</string>
+
+    <string name="event2_date">28 Aug 2018</string>
+    <string name="event2_place">Triund</string>
+    <string name="event2_duration">2N / 2D</string>
+    <string name="event2_cost">Rs.4500 per person</string>
+    <string name="event2_phone">+91 000 0000 000</string>
+
+    <string name="event3_date">2 Sep 2018</string>
+    <string name="event3_place">Nag Tibba</string>
+    <string name="event3_duration">1N / 2D</string>
+    <string name="event3_cost">Rs.2800 per person</string>
+    <string name="event3_phone">+91 111 1111 111</string>
+
+    <string name="dest1_name">Nag Tibba</string>
+    <string name="dest1_city">Mussoorie</string>
+    <string name="dest1_state">Uttarakhand</string>
+    <string name="dest1_about">Nag Tibba trek gives you the unmatched experience of trekking on one of the most beautiful landscapes in Uttarakhand with lush green meadows and snow-capped mountains. The panorama of the Himalayan snow peaks of Garhwal and Himachal offers views of famous peaks Bandarpoonch, Swargarohini, Srikanth and Black peak</string>
+    <string name="dest1_howtoreach">Delhi-Dehradun-Pantwari-Nag Tibba</string>
+    <string name="dest1_hotel">Mussoorie</string>
+    <string name="dest1_bank">Mussoorie</string>
+    <string name="dest1_medical">Mussoorie</string>
+
+    <string name="dest2_name">Prashar Lake</string>
+    <string name="dest2_city">Mandi</string>
+    <string name="dest2_state">Himanchal Pradesh</string>
+    <string name="dest2_about">Prashar Lake lies 49 km north of Mandi, Himachal Pradesh, India, with a three storied pagoda-like temple dedicated to the sage Prashar. The lake is located at a height of 2730 m above sea level. With deep blue waters, the lake is held sacred to the sage Prashar and he is regarded to have meditated there. Surrounded by snow-capped peaks and looking down on the fast flowing river Beas, the lake can be approached via Drang.</string>
+    <string name="dest2_howtoreach">Delhi-Mandi-Prashar Lake</string>
+    <string name="dest2_hotel">Mandi</string>
+    <string name="dest2_bank">Mandi</string>
+    <string name="dest2_medical">Mandi</string>
+
+    <string name="dest3_name">Chandrashila Trek</string>
+    <string name="dest3_city">Tungnath</string>
+    <string name="dest3_state">Uttarakhand</string>
+    <string name="dest3_about">There are three reasons one must do this trek – the forests, the birds and the fabulous mountain views. Atop the peak, on a clear day, you can get a 360 degree view of peaks like Nanda Devi, Chaukhambha and Trishul. Another highlight of the trek is the chance to climb up to the world’s highest Shiva temple. Tungnath isthousand-year-old temple and is one of the five Panch Kedar, the holiest of Shiva temples. The sunrise from the Chandrashila summit wraps up the trek with strong emotions and memories to take back home.</string>
+    <string name="dest3_howtoreach">Delhi-Chopta-Tungnath</string>
+    <string name="dest3_hotel">Chandrapuri</string>
+    <string name="dest3_bank">Chandrapuri</string>
+    <string name="dest3_medical">Chandrapuri</string>
+
+    <string name="dest4_name">Triund</string>
+    <string name="dest4_city">Mcleodganj</string>
+    <string name="dest4_state">Himanchal Pradesh</string>
+    <string name="dest4_about">Triund trek gives you the unmatched experience of trekking on one of the most beautiful landscapes in Himachal Pradesh with waterfalls, lush green meadows and snow-capped mountains. Triund trek is very much suitable in spring and summer as Triund temperature remains very suitable and weather at Triund and adjacent areas is becomes very enjoyable with beautiful sight of sky kissing high Himalayan peaks.</string>
+    <string name="dest4_howtoreach">Delhi-Mcleodganj-Triund Hill</string>
+    <string name="dest4_hotel">Mcleodganj</string>
+    <string name="dest4_bank">Mcleodganj</string>
+    <string name="dest4_medical">Mcleodganj</string>
+
+    <string name="dest5_name">Tirthan</string>
+    <string name="dest5_city">Aut</string>
+    <string name="dest5_state">Himanchal Pradesh</string>
+    <string name="dest5_about">The Great Himalayan National Park in Himachal Pradesh offers lush meadows, snow clad peaks, the enchanting Tirthan River and Himalayan flora and fauna. It has distinct, endangered and regionally endemic Himalayan species – Himalayan Musk Deer and Snow Leopard being the prominent ones. Seek adventure on the Great Himalayan National Park Trek and spend days amidst the Himalayas by the Tirthan River.</string>
+    <string name="dest5_howtoreach">Delhi-Aut-Tirthan</string>
+    <string name="dest5_hotel">Aut</string>
+    <string name="dest5_bank">Aut</string>
+    <string name="dest5_medical">Aut</string>
+
+    <string name="dest6_name">Kheer Ganga</string>
+    <string name="dest6_city">Kasol</string>
+    <string name="dest6_state">Himanchal Pradesh</string>
+    <string name="dest6_about">The Parvati Valley is one of the most picturesque places in the Himalayan region of Himachal Pradesh. Two days is all you need to explore its magnificent landscape and get refreshed from within. The Kasol to Kheerganga trek is an invigorating journey, which not only unveils the stunning terrain of the Himalayas, but also gives you a chance to learn about the interesting culture of the people living here.</string>
+    <string name="dest6_howtoreach">Delhi-Kasol-Barshaini-Rudra Nag-Kheer Ganga</string>
+    <string name="dest6_hotel">Kasol</string>
+    <string name="dest6_bank">Kasol</string>
+    <string name="dest6_medical">Kasol</string>
 </resources>

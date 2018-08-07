@@ -22,6 +22,7 @@ public class EventsActivity extends AppCompatActivity {
     private Button m_Back_Button;
     private EventsAdapter m_EventsAdapter;
     private List<Events> m_EventsList;
+    Events event1;
     private ListView m_Events_ListView;
     Dialog menuDialog;
 
@@ -41,9 +42,37 @@ public class EventsActivity extends AppCompatActivity {
         m_Title_TextView.setText(R.string.title_event);
 
         // Adding data to listview using Places class
-        m_EventsList.add(new Events(R.drawable.chandrashila1, "20 Aug 2018", "Chandrashila", "1N / 2D", "Rs.3500 per person", "+91 999 9999 999"));
-        m_EventsList.add(new Events(R.drawable.triund1, "30 Aug 2018", "Triund", "2N / 2D", "Rs.4500 per person", "+91 999 9999 999"));
-        m_EventsList.add(new Events(R.drawable.nagtibba1, "10 Sep 2018", "Nag Tibba", "1N / 2D", "Rs.2800 per person", "+91 999 9999 999"));
+        /*
+        event1.setM_PlaceImageId(R.drawable.chandrashila1);
+        event1.setM_EventDate(String.valueOf(R.string.event1_date));
+        event1.setM_PlaceName(String.valueOf(R.string.event1_place));
+        event1.setM_Duration(String.valueOf(R.string.event1_duration));
+        event1.setM_Cost(String.valueOf(R.string.event1_cost));
+        event1.setM_Phone(String.valueOf(R.string.event1_phone));
+
+        m_EventsList.add(event1);
+*/
+
+        m_EventsList.add(new Events(R.drawable.chandrashila1,
+                getResources().getString(R.string.event1_date),
+                getResources().getString(R.string.event1_place),
+                getResources().getString(R.string.event1_duration),
+                getResources().getString(R.string.event1_cost),
+                getResources().getString(R.string.event1_phone)));
+
+        m_EventsList.add(new Events(R.drawable.triund1,
+                getResources().getString(R.string.event2_date),
+                getResources().getString(R.string.event2_place),
+                getResources().getString(R.string.event2_duration),
+                getResources().getString(R.string.event2_cost),
+                getResources().getString(R.string.event2_phone)));
+
+        m_EventsList.add(new Events(R.drawable.nagtibba1,
+                getResources().getString(R.string.event3_date),
+                getResources().getString(R.string.event3_place),
+                getResources().getString(R.string.event3_duration),
+                getResources().getString(R.string.event3_cost),
+                getResources().getString(R.string.event3_phone)));
 
         m_EventsAdapter = new EventsAdapter(getApplicationContext(), m_EventsList);
         m_Events_ListView.setAdapter(m_EventsAdapter);
@@ -91,7 +120,7 @@ public class EventsActivity extends AppCompatActivity {
 
     // 6. Function for Event button
     public void menuEvent(View view){
-        Toast.makeText(getApplicationContext(),"You are in Events Screen",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),R.string.toast_events,Toast.LENGTH_LONG).show();
         menuDialog.dismiss();
     }
 }

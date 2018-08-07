@@ -33,7 +33,6 @@ public class DestinationDetailActivity extends AppCompatActivity {
     private TextView m_Title_TextView;
     Dialog menuDialog;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +40,9 @@ public class DestinationDetailActivity extends AppCompatActivity {
 
         // Initialize Variables
         imageNumber = 1;
-        placeObject = getIntent().getParcelableExtra("myPlaceKey");
-        m_Source = getIntent().getStringExtra("source");
+        placeObject = getIntent().getParcelableExtra(getResources().getString(R.string.myPlaceKey));
+        m_Source = getIntent().getStringExtra(getResources().getString(R.string.source));
+
         m_Back_Button = findViewById(R.id.button_Back);
         m_Prev_Button = findViewById(R.id.button_Prev);
         m_Next_Button = findViewById(R.id.button_Next);
@@ -68,7 +68,7 @@ public class DestinationDetailActivity extends AppCompatActivity {
         m_Title_TextView.setText(placeObject.getM_PlaceName());
 
         // If source of intent was Favourite Activity then hide the Add Button as destination already added
-        if (m_Source.equals("Favourite")) {
+        if (m_Source.equals(getResources().getString(R.string.act_favourite))) {
             m_Add_Button.setVisibility(View.INVISIBLE);
         } else {
             m_Add_Button.setVisibility(View.VISIBLE);
@@ -82,10 +82,10 @@ public class DestinationDetailActivity extends AppCompatActivity {
                 Intent previousIntent;
                 previousIntent = new Intent(DestinationDetailActivity.this, DestinationDetailActivity.class);
 
-                if (m_Source.equals("Destination")) {
+                if (m_Source.equals(getResources().getString(R.string.act_destination))) {
                     previousIntent = new Intent(DestinationDetailActivity.this, DestinationsActivity.class);
 
-                } else if (m_Source.equals("Favourite")) {
+                } else if (m_Source.equals(getResources().getString(R.string.act_favourite))) {
                     previousIntent = new Intent(DestinationDetailActivity.this, FavouriteActivity.class);
 
                 }
@@ -97,9 +97,9 @@ public class DestinationDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent galleryIntent = new Intent(DestinationDetailActivity.this, GalleryActivity.class);
-                galleryIntent.putExtra("source", m_Source);
-                galleryIntent.putExtra("myPlaceKey", placeObject);
-                galleryIntent.putExtra("imageNumber", imageNumber);
+                galleryIntent.putExtra(getResources().getString(R.string.source), m_Source);
+                galleryIntent.putExtra(getResources().getString(R.string.myPlaceKey), placeObject);
+                galleryIntent.putExtra(getResources().getString(R.string.imageNumber), imageNumber);
                 startActivity(galleryIntent);
             }
         });
@@ -144,7 +144,7 @@ public class DestinationDetailActivity extends AppCompatActivity {
         m_Add_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Destination added to My Favourite", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.toast_dest_added, Toast.LENGTH_LONG).show();
             }
         });
     }
