@@ -46,23 +46,7 @@ public class GalleryActivity extends AppCompatActivity {
         m_Back_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent galleryIntent;
-                galleryIntent = new Intent(GalleryActivity.this, GalleryActivity.class);
-
-                if (m_Source.equals(getResources().getString(R.string.act_destination))) {
-
-                    galleryIntent = new Intent(GalleryActivity.this, DestinationDetailActivity.class);
-                    galleryIntent.putExtra(getResources().getString(R.string.source), m_Source);
-                    galleryIntent.putExtra(getResources().getString(R.string.myPlaceKey), placeObject);
-
-                } else if (m_Source.equals(getResources().getString(R.string.act_favourite))) {
-
-                    galleryIntent = new Intent(GalleryActivity.this, FavouriteActivity.class);
-                    galleryIntent.putExtra(getResources().getString(R.string.source), m_Source);
-                    galleryIntent.putExtra(getResources().getString(R.string.myPlaceKey), placeObject);
-
-                }
-
+                Intent galleryIntent = new Intent(GalleryActivity.this, DestinationDetailActivity.class);
                 startActivity(galleryIntent);
             }
         });
