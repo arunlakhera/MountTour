@@ -15,60 +15,52 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EventsActivity extends AppCompatActivity {
+public class VisitedActivity extends AppCompatActivity {
 
     // Variable Declarations
     private TextView m_Title_TextView;
     private Button m_Back_Button;
-    private EventsAdapter m_EventsAdapter;
-    private List<Events> m_EventsList;
-    Events event1;
-    private ListView m_Events_ListView;
+    private VisitedAdapter m_VisitedAdapter;
+    private List<Events> m_VisitedList;
+    private ListView m_Visited_ListView;
     Dialog menuDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_events);
+        setContentView(R.layout.activity_visited);
 
         //Initialize Variables
         m_Title_TextView = findViewById(R.id.textView_Title);
         m_Back_Button = findViewById(R.id.button_Back);
         menuDialog = new Dialog(this);
 
-        m_Events_ListView = findViewById(R.id.listView_Events);
-        m_EventsList = new ArrayList<>();
-        m_Title_TextView.setText(R.string.title_event);
+        m_Visited_ListView = findViewById(R.id.listView_Visited);
+        m_VisitedList = new ArrayList<>();
+        m_Title_TextView.setText(R.string.title_visited);
 
-        m_EventsList.add(new Events(R.drawable.chandrashila1,
+        m_VisitedList.add(new Events(R.drawable.chandrashila1,
                 getResources().getString(R.string.event1_date),
                 getResources().getString(R.string.event1_place),
                 getResources().getString(R.string.event1_duration),
                 getResources().getString(R.string.event1_cost),
                 getResources().getString(R.string.event1_phone)));
 
-        m_EventsList.add(new Events(R.drawable.triund1,
-                getResources().getString(R.string.event2_date),
-                getResources().getString(R.string.event2_place),
-                getResources().getString(R.string.event2_duration),
-                getResources().getString(R.string.event2_cost),
-                getResources().getString(R.string.event2_phone)));
-
-        m_EventsList.add(new Events(R.drawable.nagtibba1,
+        m_VisitedList.add(new Events(R.drawable.nagtibba1,
                 getResources().getString(R.string.event3_date),
                 getResources().getString(R.string.event3_place),
                 getResources().getString(R.string.event3_duration),
                 getResources().getString(R.string.event3_cost),
                 getResources().getString(R.string.event3_phone)));
 
-        m_EventsAdapter = new EventsAdapter(getApplicationContext(), m_EventsList);
-        m_Events_ListView.setAdapter(m_EventsAdapter);
+        m_VisitedAdapter = new VisitedAdapter(getApplicationContext(), m_VisitedList);
+        m_Visited_ListView.setAdapter(m_VisitedAdapter);
 
         //Action to perform when back button is pressed
         m_Back_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(EventsActivity.this, HomeActivity.class));
+                startActivity(new Intent(VisitedActivity.this, HomeActivity.class));
             }
         });
     }
@@ -92,27 +84,29 @@ public class EventsActivity extends AppCompatActivity {
 
     // 3. Function for Home button
     public void menuHome(View view){
-        startActivity(new Intent(EventsActivity.this,HomeActivity.class));
+        startActivity(new Intent(VisitedActivity.this,HomeActivity.class));
     }
 
     // 4. Function for Destinations button
     public void menuDestinations(View view){
-        startActivity(new Intent(EventsActivity.this,DestinationsActivity.class));
+        startActivity(new Intent(VisitedActivity.this,DestinationsActivity.class));
     }
 
     // 5. Function for Favourite button
     public void menuFavourite(View view){
-        startActivity(new Intent(EventsActivity.this,FavouriteActivity.class));
+        startActivity(new Intent(VisitedActivity.this,FavouriteActivity.class));
     }
 
     // 6. Function for Event button
     public void menuEvent(View view){
-        Toast.makeText(getApplicationContext(),R.string.toast_events,Toast.LENGTH_LONG).show();
+        startActivity(new Intent(VisitedActivity.this,EventsActivity.class));
         menuDialog.dismiss();
     }
 
     // 7. Function for Visited button
     public void visitedEvent(View view){
-        startActivity(new Intent(EventsActivity.this,VisitedActivity.class));
+        Toast.makeText(getApplicationContext(),R.string.toast_visited,Toast.LENGTH_LONG).show();
+        menuDialog.dismiss();
+
     }
 }

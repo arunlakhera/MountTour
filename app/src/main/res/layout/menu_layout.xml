@@ -51,4 +51,16 @@
         android:textSize="@dimen/text_small"
         android:onClick="menuEvent"
         />
+
+    <Button
+        android:id="@+id/button_Visited"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_visited"
+        android:background="@color/textAqua"
+        android:textColor="@color/textDefault"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_small"
+        android:onClick="visitedEvent"
+        />
 </LinearLayout>

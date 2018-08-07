@@ -185,4 +185,9 @@ public class DestinationDetailActivity extends AppCompatActivity {
     public void menuEvent(View view){
         startActivity(new Intent(DestinationDetailActivity.this,EventsActivity.class));
     }
+
+    // 7. Function for Visited button
+    public void visitedEvent(View view){
+        startActivity(new Intent(DestinationDetailActivity.this,VisitedActivity.class));
+    }
 }

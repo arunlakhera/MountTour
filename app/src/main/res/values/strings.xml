@@ -4,6 +4,7 @@
     <string name="title_destination">Destinations</string>
     <string name="title_favourite">My Favourite</string>
     <string name="title_event">Upcoming Events</string>
+    <string name="title_visited">Visited</string>
     <string name="about_lbl">About the Place</string>
     <string name="location_lbl">Location</string>
     <string name="reach_lbl">How to Reach</string>
@@ -14,10 +15,12 @@
     <string name="act_destination">DestinationsActivity</string>
     <string name="act_favourite">FavouriteActivity</string>
     <string name="act_events">EventsActivity</string>
+    <string name="act_visited">VisitedActivity</string>
     <string name="toast_home">You are in Home screen</string>
     <string name="toast_events">You are in Events screen</string>
     <string name="toast_destinations">You are in Destinations screen</string>
     <string name="toast_favourite">You are in Favourite screen</string>
+    <string name="toast_visited">You are in Visited screen</string>
     <string name="source">source</string>
     <string name="myPlaceKey">myPlaceKey</string>
     <string name="imageNumber">imageNumber</string>
@@ -30,7 +33,7 @@
     <string name="event1_duration">1N / 2D</string>
     <string name="event1_cost">Rs.3500 per person</string>
     <string name="event1_phone">+91 999 9999 999</string>
-
+    <string name="completed">Been Here</string>
     <string name="event2_date">28 Aug 2018</string>
     <string name="event2_place">Triund</string>
     <string name="event2_duration">2N / 2D</string>

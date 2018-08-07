@@ -20,6 +20,7 @@ public class HomeActivity extends AppCompatActivity {
     Button m_Button_Destinations;
     Button m_Button_Favourite;
     Button m_Button_Events;
+    Button m_Button_Visited;
     Button m_Button_Back;
     Dialog menuDialog;
 
@@ -33,6 +34,7 @@ public class HomeActivity extends AppCompatActivity {
         m_Button_Destinations = findViewById(R.id.button_Destinations);
         m_Button_Favourite = findViewById(R.id.button_Favourite);
         m_Button_Events = findViewById(R.id.button_Events);
+        m_Button_Visited = findViewById(R.id.button_Visited);
         m_Button_Back = findViewById(R.id.button_Back);
         menuDialog = new Dialog(this);
 
@@ -65,6 +67,14 @@ public class HomeActivity extends AppCompatActivity {
                 homeIntent(String.valueOf(R.string.act_events));
             }
         });
+
+        m_Button_Visited.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                homeIntent(String.valueOf(R.string.act_visited));
+            }
+        });
+
     }
 
     /**
@@ -80,6 +90,8 @@ public class HomeActivity extends AppCompatActivity {
             homeIntent = new Intent(HomeActivity.this, FavouriteActivity.class);
         } else if (destination.equals(String.valueOf(R.string.act_events))) {
             homeIntent = new Intent(HomeActivity.this, EventsActivity.class);
+        }else if(destination.equals(String.valueOf(R.string.act_visited))) {
+            homeIntent = new Intent(HomeActivity.this, VisitedActivity.class);
         } else {
             homeIntent = new Intent(HomeActivity.this, HomeActivity.class);
         }
@@ -122,5 +134,10 @@ public class HomeActivity extends AppCompatActivity {
     // 6. Function for Event button
     public void menuEvent(View view){
         startActivity(new Intent(HomeActivity.this,EventsActivity.class));
+    }
+
+    // 7. Function for Visited button
+    public void visitedEvent(View view){
+        startActivity(new Intent(HomeActivity.this,VisitedActivity.class));
     }
 }

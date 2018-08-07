@@ -133,4 +133,9 @@ public class FavouriteActivity extends AppCompatActivity {
     public void menuEvent(View view){
         startActivity(new Intent(FavouriteActivity.this,EventsActivity.class));
     }
+
+    // 7. Function for Visited button
+    public void visitedEvent(View view){
+        startActivity(new Intent(FavouriteActivity.this,VisitedActivity.class));
+    }
 }

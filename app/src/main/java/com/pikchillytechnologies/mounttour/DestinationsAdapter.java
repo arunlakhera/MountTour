@@ -35,7 +35,7 @@ public class DestinationsAdapter extends ArrayAdapter<Places> {
         TextView placeName_TextView = convertView.findViewById(R.id.textView_PlaceName);
         TextView cityStateName_TextView = convertView.findViewById(R.id.textView_CityStateName);
 
-        String city_State = place.getM_CityName() + "," + place.getM_StateName(); //String.valueOf(place.getM_CityName()) + ", " + String.valueOf(place.getM_StateName());
+        String city_State = place.getM_CityName() + "," + place.getM_StateName();
 
         placeImageView.setImageResource(place.getM_PlaceImageId());
         placeName_TextView.setText(String.valueOf(place.getM_PlaceName()));
