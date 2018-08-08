@@ -16,8 +16,9 @@
     <ImageView
         android:id="@+id/imageView_PlaceImage"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/image_height"
+        android:layout_height="match_parent"
         android:contentDescription="@string/image_place"
+        android:layout_below="@id/layout_toolbar"
         android:layout_centerInParent="true"
         android:scaleType="fitXY"
         android:src="@drawable/tirthan2" />

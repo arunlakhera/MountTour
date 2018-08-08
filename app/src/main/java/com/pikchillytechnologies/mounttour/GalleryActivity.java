@@ -47,6 +47,8 @@ public class GalleryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent galleryIntent = new Intent(GalleryActivity.this, DestinationDetailActivity.class);
+                galleryIntent.putExtra(getResources().getString(R.string.source), m_Source);
+                galleryIntent.putExtra(getResources().getString(R.string.myPlaceKey), placeObject);
                 startActivity(galleryIntent);
             }
         });
